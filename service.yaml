@@ -1,10 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sample-app
+  name: sample-app-svc
 spec:
-  ports:
-  - port: 80
-    targetPort: 8080
   selector:
-    app: sample-app
+    role: sample-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+    nodePort: 32000
+  type: NodePort
