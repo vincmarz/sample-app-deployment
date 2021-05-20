@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: vincmarz/go-http-server:latest
+        image: vincmarz/go-http-server:22
         ports:
         - containerPort: 8080
         resources:
